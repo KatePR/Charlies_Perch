@@ -32,6 +32,11 @@ public partial class AdminMenu : System.Web.UI.Page
         Response.Redirect("AdminMeatsPage.aspx");
     }
 
+    protected void animateClick(object sender, EventArgs e)
+    {
+
+    }
+
     protected void animate_Click(object sender, EventArgs e)
     {
 

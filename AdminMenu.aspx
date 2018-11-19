@@ -5,7 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Menu</title>
-    <link rel="stylesheet" href="css/TextAnimation.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/Animate.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/ShinyText.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Javascript/toggle.js"></script>
 
     <style type ="text/css">
         #wrap {
@@ -46,10 +50,14 @@
         <div class="label">
             <asp:Label ID="edittagline" runat="server" Text="Here, you can edit the tagline, Admin."></asp:Label><br/>
             <div class="typewriter" contenteditable="true">
-                <asp:Label ID="Label3" runat="server" Text="Welcome to Charlies Flavor Town!" Font-Bold="True" Font-Size="Larger"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
+            </div>
+            <div class="shine" contenteditable="true">
+                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
             </div>
                 <br/>
             <asp:Button ID="animate" runat="server" text="Animate" OnClick="animate_Click" />
+            <asp:Button ID="shiny" runat="server" style="margin-left: 82px" Text="Shine" Width="79px" />
         </div>
         <br/><br/>
         <div id="wrap">

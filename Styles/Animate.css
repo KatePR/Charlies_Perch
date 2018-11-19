@@ -1,13 +1,13 @@
 ﻿.typewriter {
-  font-family: monospace; 
   overflow: hidden; 
   border-right: .15em solid orange; 
   white-space: nowrap; 
-  margin: 0 auto;
+  margin: 0 auto 0 0px;
   letter-spacing: .15em;
   animation: 
-    typing 3.5s steps(30, end),
-    blinking-cursor .5s step-end infinite;
+    typing 3.5s steps(18, end),
+    blinking-cursor .5s step-end;
+    width: 315px;
 }
 
 @keyframes typing {
@@ -17,5 +17,5 @@
 
 @keyframes blinking-cursor {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: firebrick; }
 }
