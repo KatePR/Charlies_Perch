@@ -24,13 +24,15 @@ public partial class Login : System.Web.UI.Page
     {
         string UserName = UsernameTextbox.Text;
         string Password = PasswordTextbox.Text;
-
+        //the connection string below is setting the source of the database.
         string connString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
 
         SqlConnection conn = new SqlConnection(connString1);
 
         conn.Open();
 
+        //the dataAdapter below is selecting all information from the login table in the login database.
+        //it selects the information that is in the databse based on the users input.
         SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Login WHERE username = '" +UsernameTextbox.Text+ "'and password = '" +PasswordTextbox.Text+ "'", conn);
         DataTable dt = new DataTable();
         Console.Write(sda.TableMappings.ToString());
@@ -51,8 +53,10 @@ public partial class Login : System.Web.UI.Page
             {
                 Session["UserName"] = UserName;
 
+                //if the username has the role of "Admin, the user will be redirected to the Admin page."
                 if (dt.Rows[i]["Role"].ToString() == "Admin")
                     Response.Redirect("AdminPage.aspx");
+                //if the username has the role of "Employee", the user will be redirected to the Employee page.
                 else if (dt.Rows[i]["Role"].ToString() == "Employee")
                     Response.Redirect("StaffPage.aspx");
             }

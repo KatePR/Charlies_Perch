@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Meats</title>
+    <!-- the link down below is for getting the information from a stylesheet in another folder. -->
     <link rel="stylesheet" href="StyleSheet.css"/>
     <style type="text/css">
         #form1 {

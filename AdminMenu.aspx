@@ -58,6 +58,8 @@
                 <br/>
             <asp:Button ID="animate" runat="server" text="Animate" OnClick="animate_Click" />
             <asp:Button ID="shiny" runat="server" style="margin-left: 82px" Text="Shine" Width="79px" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="changeTagline" runat="server" OnClick="Button3_Click" Text="Change Tagline" Width="107px" />
         </div>
         <br/><br/>
         <div id="wrap">

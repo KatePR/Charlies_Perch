@@ -7,7 +7,7 @@
   animation: 
     typing 3.5s steps(18, end),
     blinking-cursor .5s step-end;
-    width: 315px;
+    width: 449px;
 }
 
 @keyframes typing {
