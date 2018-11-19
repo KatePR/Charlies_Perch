@@ -27,30 +27,35 @@
     </asp:Panel>
         <br/><br/>
         <center>
-        <asp:Label ID="Label3" runat="server" Text="Name:"></asp:Label>
-       
         
         <br/>
+            <asp:ListBox ID="ListBox1" runat="server" Height="289px" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" style="margin-left: 0px" Width="558px" SelectionMode="Multiple"></asp:ListBox>
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Please enter the Name, Price, and Description of the item below."></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="item" runat="server" Height="138px" style="margin-left: 0px" TextMode="MultiLine" Width="274px"></asp:TextBox>
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="add_Item" runat="server" style="margin-left: 0px" Text="Add" Width="79px" OnClick="add_Item_Click" />
+&nbsp;
+            <asp:Button ID="remove_Item" runat="server" Text="Remove" Width="77px" OnClick="remove_Item_Click" />
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" Width="203px" style = "resize:none"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="Label4" runat="server" Text="Price:"></asp:Label>
-        <br />
-        <br />
-        <asp:TextBox ID="TextBox3" runat="server" style = "resize:none"></asp:TextBox>
         <br />
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Description: "></asp:Label>
         <br />
         <br />
-        <asp:TextBox ID="TextBox2" runat="server" Height="152px" style="resize:none" TextMode="MultiLine" Width="279px"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
         <br/>
-        <asp:Button ID="Button1" runat="server" style="margin-left: 460px" Text="Add Item" Width="105px" />
         </center>
     </form>
 </body>

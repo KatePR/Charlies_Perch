@@ -21,4 +21,20 @@ public partial class AddPage : System.Web.UI.Page
     {
         Response.Redirect("AdminMenu.aspx");
     }
+
+    protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void add_Item_Click(object sender, EventArgs e)
+    {
+        ListBox1.Items.Add(item.Text);
+        ListBox1.SelectedIndex = ListBox1.SelectedIndex + 1;
+    }
+
+    protected void remove_Item_Click(object sender, EventArgs e)
+    {
+        ListBox1.Items.Remove(ListBox1.SelectedItem);
+    }
 }
