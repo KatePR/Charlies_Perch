@@ -11,4 +11,14 @@ public partial class StaffMeatMenu : System.Web.UI.Page
     {
 
     }
+
+    protected void homeButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("StaffPage.aspx");
+    }
+
+    protected void menuButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("StaffMenu.aspx");
+    }
 }
