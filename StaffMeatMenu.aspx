@@ -33,11 +33,12 @@
             <asp:Label ID="Label7" runat="server" Font-Bold="True" Text="$9.00"></asp:Label>
             <br />
             <asp:Image ID="Image2" runat="server" Height="152px" ImageUrl="~/Images/burger_and_fries.jpg" style="margin-left: 11px" Width="235px" />
-   <asp:TextBox ID="TextBox1" runat="server" Height="145px" style="margin-top: 0px" Width="259px" TextMode="MultiLine" contenteditable ="true">This dish includes rice noodles with lime, carrot, and red 
-cabbage slices, topped off with black sesame seeds and peanuts.
+   <asp:TextBox ID="TextBox1" runat="server" Height="145px" style="margin-top: 0px" Width="259px" TextMode="MultiLine" contenteditable ="true">Made using ground beef(80% lean,
+20% fat). Toppings include red onion, tomato, lettuce, and swiss cheese. Comes with a side of 
+homemade potato chips.
     
-*Those with food allergies should be aware that this dish was made using peanut oil and there are 
-peanuts that top it.</asp:TextBox>
+*Those with food allergies should be aware that the chips are fried in peanut oil. We recommend
+asking for a different side.</asp:TextBox>
         </asp:Panel>
         <asp:Panel ID="Panel8" runat="server" BorderStyle="Ridge" Height="188px" style="margin-left: 294px; margin-top: 12px" Width="518px">
             <asp:Label ID="Label5" runat="server" Text="Chicken Fingers" Font-Size="Large"></asp:Label>
@@ -45,11 +46,11 @@ peanuts that top it.</asp:TextBox>
             <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="$6.50"></asp:Label>
             <br />
             <asp:Image ID="Image3" runat="server" Height="152px" ImageUrl="~/Images/tendies.jpg" style="margin-left: 14px" Width="235px" />
-            <asp:TextBox ID="TextBox2" runat="server" Height="145px" contenteditable ="true" TextMode="MultiLine" Width="248px">This dish includes tomato sauce and mozzarela cheese, topped 
-with broccoli, tomato slices, and red onion rings.
+            <asp:TextBox ID="TextBox2" runat="server" Height="145px" contenteditable ="true" TextMode="MultiLine" Width="248px">Breaded and fried chicken tenders with a side of our seasoned fries. We 
+also have many different dipping sauces to choose from!
 
-*Those with food allergies should know that the doe of this pizza
-is NOT gluten-free.</asp:TextBox>
+*Those with food allergies should know that the chicken tenders
+are not gluten free due to the breading used.</asp:TextBox>
         </asp:Panel>
         
         <br/>
