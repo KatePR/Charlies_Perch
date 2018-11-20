@@ -27,6 +27,7 @@
             </asp:Panel>
             <br />
             <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="50px" ForeColor="#FFCC00" Text="The Chuck Special"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label4" runat="server" Font-Size="50px" ForeColor="#FFCC00" Text="$9.00"></asp:Label>
             <asp:Image ID="Image2" runat="server" Height="345px" ImageUrl="~/Images/burger_and_fries.jpg" Width="604px" style="margin-left: 141px; margin-top: 19px" />
             <br />
