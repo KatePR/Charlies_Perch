@@ -5,9 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Menu</title>
+    <!-- The two link down below are referencing two external style sheets meaning they are outside the . -->
     <link rel="stylesheet" href="Styles/Animate.css" type="text/css" />
     <link rel="stylesheet" href="Styles/ShinyText.css" type="text/css" />
-
+    <!-- The script below is an import for JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="Javascript/toggle.js"></script>
 
