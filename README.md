@@ -4,7 +4,7 @@ This is a website developed using Visual Studio 2015. The different languages an
 There is also a SQL database that stores user login information. For this project, I, along with other students, had to create our own 
 webstie for a figurative restaurant.
 
-#Project Requirements based on Iterations
+# Project Requirements based on Iterations
 
 Project Requirments:
 * The application will be built using ASP.Net.
