@@ -21,4 +21,9 @@ public partial class AdminVeggieMenu : System.Web.UI.Page
     {
         Response.Redirect("AdminMenu.aspx");
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddPage.aspx");
+    }
 }
