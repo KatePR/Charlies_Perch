@@ -48,7 +48,9 @@
         </asp:Panel>
         <br/><br/><br/><br/>
         <div class="label">
-            <asp:Label ID="edittagline" runat="server" Text="Here, you can edit the tagline, Admin."></asp:Label><br/>
+            <asp:Label ID="edittagline" runat="server" Text="Here, you can edit the tagline, Admin."></asp:Label>
+            <br />
+            <br/>
             <div class="typewriter" contenteditable="true">
                 <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
             </div>
@@ -57,9 +59,7 @@
             </div>
                 <br/>
             <asp:Button ID="animate" runat="server" text="Animate" OnClick="animate_Click" />
-            <asp:Button ID="shiny" runat="server" style="margin-left: 82px" Text="Shine" Width="79px" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="changeTagline" runat="server" OnClick="Button3_Click" Text="Change Tagline" Width="107px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <br/><br/>
         <div id="wrap">
