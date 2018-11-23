@@ -53,7 +53,7 @@
             <br />
             <br/>
             <div class="typewriter" contenteditable="true">
-                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
+                <asp:Label ID="tagLine" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
             </div>
             <div class="shine" contenteditable="true">
                 <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="Larger">Welcome to Charlies Flavor Town!</asp:Label>
@@ -61,6 +61,7 @@
                 <br/>
             <asp:Button ID="animate" runat="server" text="Animate" OnClick="animate_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="update" runat="server" OnClick="update_Click" Text="Update Tagline" />
         </div>
         <br/><br/>
         <div id="wrap">

@@ -26,4 +26,9 @@ public partial class AdminPage : System.Web.UI.Page
     {
         Response.Redirect("AdminMeatsPage.aspx");
     }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

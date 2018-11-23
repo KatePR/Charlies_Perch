@@ -34,6 +34,8 @@
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Height="28px" OnClick="Button1_Click" style="margin-left: 375px; margin-top: 0px" Text="View Now" Width="172px" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Logout" />
             <br />
             <asp:Panel ID="Panel9" runat="server" BackColor="#FFCC00" Height="16px" Width="882px">
             </asp:Panel>

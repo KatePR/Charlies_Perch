@@ -31,4 +31,9 @@ public partial class Home : System.Web.UI.Page
     {
         Response.Redirect("Meats.aspx");
     }
+
+    protected void cartButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

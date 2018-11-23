@@ -47,15 +47,31 @@ public partial class AdminMenu : System.Web.UI.Page
 
     }
 
-   /* protected void Button3_Click(object sender, EventArgs e)
+    /* protected void Button3_Click(object sender, EventArgs e)
+     {
+         StringBuilder build = new StringBuilder();
+         build.Append(tagLine.Text);
+
+         string conString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
+         using (SqlConnection con = new SqlConnection(conString1))
+         {
+
+             con.Open();
+             if (build != null && build.ToString() != "")
+             {
+                 cmd = new SqlCommand("UPDATE TagLine SET text ='" + build.ToString() + "' WHERE id=0", con);
+                 cmd.ExecuteNonQuery();
+             }
+         }
+     }*/
+
+    protected void update_Click(object sender, EventArgs e)
     {
         StringBuilder build = new StringBuilder();
         build.Append(tagLine.Text);
-        
-        string conString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
-        using (SqlConnection con = new SqlConnection(conString1))
-        {
 
+        using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB"].ConnectionString))
+        {
             con.Open();
             if (build != null && build.ToString() != "")
             {
@@ -63,5 +79,5 @@ public partial class AdminMenu : System.Web.UI.Page
                 cmd.ExecuteNonQuery();
             }
         }
-    }*/
+    }
 }
