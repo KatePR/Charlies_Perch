@@ -30,12 +30,7 @@
             <br/>
             <asp:Label ID="welcome" runat="server" Font-Bold="False" Font-Size="Large" Text="Here you can add items to your shopping cart."></asp:Label>
             <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="items" runat="server" Font-Bold="False" Font-Size="Large" Text="Items in your cart: "></asp:Label>
-            <asp:Label ID="Label3" runat="server" Font-Bold="True"></asp:Label>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AddtoCart.aspx">Show Cart</asp:HyperLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <br />
@@ -49,13 +44,13 @@
                     <table border="1" class="auto-style1">
                         <tr>
                             <td>
-                                <asp:Label ID="Label2" runat="server" Text="Name"></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Text="Name: "></asp:Label>
                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:Label ID="Label4" runat="server" Text="Price"></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="Price: "></asp:Label>
                                 <asp:Label ID="Label5" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                             </td>
                         </tr>
@@ -66,7 +61,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:Label ID="Label6" runat="server" Text="Description"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="Description: "></asp:Label>
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("description") %>'></asp:Label>
                             </td>
                         </tr>
@@ -95,6 +90,10 @@
             <br />
             <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Cart]"></asp:SqlDataSource>
+
+            <br />
+            <br />
+            <asp:Button ID="order" runat="server" Height="36px" OnClick="order_Click" style="margin-left: 0px" Text="Order" Width="100px" />
 
         </center>
         
