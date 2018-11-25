@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Charlie's Perch</h1>
+        <h1 id="companyName" runat="server">Charlie's Perch</h1>
     </div>
         <asp:Panel ID="Panel6" runat="server" BackColor="#CC0000" Height="19px" style="margin-top: 0px">
             <asp:Panel ID="Panel5" runat="server" BackColor="#202020" Height="262px" Width="153px">
