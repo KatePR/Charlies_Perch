@@ -32,14 +32,14 @@
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="items" runat="server" Font-Bold="False" Font-Size="Large" Text="Items in your cart: "></asp:Label>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Font-Bold="True"></asp:Label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AddtoCart.aspx">Show Cart</asp:HyperLink>
             <br />
             <br />
             <br />
-            <asp:DataList ID="DataList1" runat="server" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="Name" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" RepeatColumns="3" RepeatDirection="Horizontal" style="margin-left: 18px; margin-top: 0px; margin-right: 0px;" OnItemCommand="DataList1_ItemCommand1">
+            <asp:DataList ID="DataList1" runat="server" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="Name" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" RepeatColumns="3" RepeatDirection="Horizontal" style="margin-left: 18px; margin-top: 0px; margin-right: 0px;" OnItemCommand="DataList1_ItemCommand">
                 <AlternatingItemStyle BackColor="White" />
                 <FooterStyle BackColor="#CCCC99" />
                 <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -67,7 +67,7 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Label6" runat="server" Text="Description"></asp:Label>
-                                <asp:Label ID="Label7" runat="server"></asp:Label>
+                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("description") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>

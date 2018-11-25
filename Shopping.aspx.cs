@@ -15,11 +15,11 @@ public partial class Shopping : System.Web.UI.Page
         dt = (DataTable)Session["buyItems"];
         if (dt != null)
         {
-            Label1.Text = dt.Rows.Count.ToString();
+            Label3.Text = dt.Rows.Count.ToString();
         }
         else
         {
-            Label1.Text = "0";
+            Label3.Text = "0";
         }
     }
 
@@ -38,9 +38,12 @@ public partial class Shopping : System.Web.UI.Page
         Response.Redirect("Shopping.aspx");
     }
 
-    protected void DataList1_ItemCommand1(object source, DataListCommandEventArgs e)
+    protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
     {
-        DropDownList dList = (DropDownList)(e.Item.FindControl("DropDownList1"));
-        Response.Redirect("AddtoCart.aspx?id=" + e.CommandArgument.ToString() + "&quantity=" + dList.SelectedItem.ToString());
+        if (e.CommandName == "addtocart")
+        {
+            DropDownList dList = (DropDownList)(e.Item.FindControl("DropDownList1"));
+            Response.Redirect("AddtoCart.aspx?id= '" + e.CommandArgument.ToString() + "'&quantity= '" + dList.SelectedItem.ToString() + "'");
+        }
     }
 }

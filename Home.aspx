@@ -17,6 +17,15 @@
                 <asp:Button ID="homeButton" runat="server" Text="Home" Height="40px" OnClick="homeButton_Click" Width="124px" style="margin-left: 13px; margin-top: 21px" />
                 <asp:Button ID="menuButton" runat="server" Height="40px" OnClick="menuButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Menu" Width="124px" />
                 <asp:Button ID="cartButton" runat="server" Height="40px" OnClick="cartButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Shop" Width="124px" />
+                <br />
+                <br />
+                <br />
+                Locations:<br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+                    <asp:ListItem Value="0">Charlies Perch</asp:ListItem>
+                    <asp:ListItem Value="1">Coders Corner</asp:ListItem>
+                    <asp:ListItem Value="2">Movie Mutts Pizza Hut</asp:ListItem>
+                </asp:DropDownList>
             </asp:Panel>
         </asp:Panel>
         <asp:Button ID="LoginButton" runat="server" OnClick="LoginButton_Click" style="margin-left: 1242px" Text="Login" Width="78px" />
