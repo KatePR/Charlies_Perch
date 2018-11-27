@@ -9,9 +9,23 @@ using System.Web.UI.WebControls;
 
 public partial class Home : System.Web.UI.Page
 {
+    int restarauntId;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        restarauntId = Convert.ToInt32(DropDownList1.SelectedValue);
+        string connString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
+        SqlConnection conn = new SqlConnection(connString1);
+
+        conn.Open();
+
+        SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Locations WHERE Rest_ID = '" + DropDownList1.SelectedValue + "'", conn);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+        foreach (DataRow row in dt.Rows)
+        {
+            companyName.InnerText = row["Rest_Name"].ToString().Trim();
+        }
     }
 
     protected void menuButton_Click(object sender, EventArgs e)

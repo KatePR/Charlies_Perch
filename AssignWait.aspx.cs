@@ -13,6 +13,7 @@ public partial class AssignWait : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+
         if (!IsPostBack)
         {
             WaiterWaitress.Items.Clear();
@@ -94,9 +95,7 @@ public partial class AssignWait : System.Web.UI.Page
                 conn.Close();
             }
 
-
         }
-
 
             assigned.Text = WaiterWaitress.SelectedValue + " " + OrdersDDL.SelectedValue;
     }
