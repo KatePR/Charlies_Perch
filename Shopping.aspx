@@ -22,19 +22,28 @@
                 <asp:Button ID="homeButton" runat="server" Text="Home" Height="40px" OnClick="homeButton_Click" Width="124px" style="margin-left: 13px; margin-top: 21px" />
                 <asp:Button ID="menuButton" runat="server" Height="40px" OnClick="menuButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Menu" Width="124px" />
                 <asp:Button ID="cartButton" runat="server" Height="40px" OnClick="cartButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Shop" Width="124px" />
+                <br />
+                <br />
+                <br />
+                Locations:<br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+                    <asp:ListItem Value="0">Charlies Perch</asp:ListItem>
+                    <asp:ListItem Value="1">Coders Corner</asp:ListItem>
+                    <asp:ListItem Value="2">Movie Mutts Pizza Hut</asp:ListItem>
+                </asp:DropDownList>
             </asp:Panel>
         </asp:Panel>
         
         <center>
             <asp:Label ID="shop" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Shop"></asp:Label>
             <br/>
+            &nbsp;&nbsp;&nbsp;
             <asp:Label ID="welcome" runat="server" Font-Bold="False" Font-Size="Large" Text="Here you can add items to your shopping cart."></asp:Label>
             <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <br />
-            <asp:DataList ID="DataList1" runat="server" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="Name" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" RepeatColumns="3" RepeatDirection="Horizontal" style="margin-left: 18px; margin-top: 0px; margin-right: 0px;" OnItemCommand="DataList1_ItemCommand">
+            <asp:DataList ID="DataList1" runat="server" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="Name" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" RepeatColumns="3" RepeatDirection="Horizontal" style="margin-left: 18px; margin-top: 0px; margin-right: 0px;">
                 <AlternatingItemStyle BackColor="White" />
                 <FooterStyle BackColor="#CCCC99" />
                 <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -68,7 +77,7 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Label8" runat="server" Text="Quantity: "></asp:Label>
-                                <asp:DropDownList ID="DropDownList1" runat="server">
+                                <asp:DropDownList ID="QuantityDDL" runat="server">
                                     <asp:ListItem>1</asp:ListItem>
                                     <asp:ListItem>2</asp:ListItem>
                                     <asp:ListItem>3</asp:ListItem>
@@ -80,8 +89,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:ImageButton ID="addtocart" runat="server" Height="64px" ImageUrl="~/Images/Add-To-Cart-Button-Transparent-Background.png" style="margin-left: 4px" Width="208px" CommandArgument='<%# Eval("name")%>' CommandName="addtocart" />
-                            </td>
+                                &nbsp;</td>
                         </tr>
                     </table>
                 </ItemTemplate>
@@ -93,7 +101,7 @@
 
             <br />
             <br />
-            <asp:Button ID="order" runat="server" Height="36px" OnClick="order_Click" style="margin-left: 0px" Text="Order" Width="100px" />
+            <asp:Button ID="order" runat="server" Height="36px" OnClick="order_Click" style="margin-left: 0px" Text="Order" Width="100px" Font-Size="Medium" />
 
         </center>
         

@@ -21,7 +21,6 @@ public partial class Menu : System.Web.UI.Page
 
         SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Locations WHERE Rest_ID = '" + DropDownList1.SelectedValue + "'", conn);
         DataTable dt = new DataTable();
-        //Console.Write(sda.TableMappings.ToString());
         sda.Fill(dt);
         foreach(DataRow row in dt.Rows)
         {

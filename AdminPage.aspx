@@ -13,11 +13,16 @@
         Welcome Admin!
     </div>
         <asp:Panel ID="Panel6" runat="server" BackColor="#CC0000" Height="19px" style="margin-top: 0px">
-            <asp:Panel ID="Panel5" runat="server" BackColor="#202020" Height="328px" Width="153px">
+            <asp:Panel ID="Panel5" runat="server" BackColor="#202020" Height="377px" Width="153px">
                 <asp:Image ID="Image4" runat="server" Height="120px" ImageUrl="~/Images/charlie_head_logo.png" style="margin-left: 4px" Width="146px" />
                 <asp:Button ID="homeButton" runat="server" Text="Home" Height="40px" OnClick="homeButton_Click" Width="124px" style="margin-left: 13px; margin-top: 21px" />
                 <asp:Button ID="menuButton" runat="server" Height="40px" OnClick="menuButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Menu" Width="124px" />
                 <asp:Button ID="assignButton" runat="server" Height="40px" OnClick="assignButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Assign Staff to Orders" Width="124px" />
+                <asp:Button ID="reportButton" runat="server" Height="40px" OnClick="reportButton_Click" style="margin-left: 13px; margin-top: 24px" Text="Report" Width="124px" />
+                <br />
+                <br />
+                <br />
+                <br />
                 <br />
                 <br />
                 <br />

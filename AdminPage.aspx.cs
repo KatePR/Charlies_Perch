@@ -54,4 +54,9 @@ public partial class AdminPage : System.Web.UI.Page
     {
         Response.Redirect("AssignWait.aspx");
     }
+
+    protected void reportButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Report.aspx");
+    }
 }

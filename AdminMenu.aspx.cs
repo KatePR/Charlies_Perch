@@ -92,6 +92,8 @@ public partial class AdminMenu : System.Web.UI.Page
             con.Open();
             if (build != null && build.ToString() != "")
             {
+                Console.WriteLine(build.ToString());
+                Console.WriteLine("Hey!");
                 cmd = new SqlCommand("UPDATE TagLine SET text ='" + build.ToString() + "' WHERE id=0", con);
                 cmd.ExecuteNonQuery();
             }
