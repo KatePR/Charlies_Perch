@@ -100,6 +100,10 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Cart]"></asp:SqlDataSource>
 
             <br />
+            Tip:
+            <asp:TextBox ID="tipText" runat="server"></asp:TextBox>
+
+            <br />
             <br />
             <asp:Button ID="order" runat="server" Height="36px" OnClick="order_Click" style="margin-left: 0px" Text="Order" Width="100px" Font-Size="Medium" />
 

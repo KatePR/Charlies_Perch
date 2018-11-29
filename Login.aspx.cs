@@ -59,6 +59,9 @@ public partial class Login : System.Web.UI.Page
                 //if the username has the role of "Employee", the user will be redirected to the Employee page.
                 else if (dt.Rows[i]["Role"].ToString() == "Employee")
                     Response.Redirect("StaffPage.aspx");
+                //if the username has the role of "Customer", the user will be redirected to the Home page.
+                else if (dt.Rows[i]["Role"].ToString() == "Customer")
+                    Response.Redirect("Home.aspx");
             }
             else
             {

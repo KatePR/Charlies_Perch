@@ -55,13 +55,23 @@ public partial class Shopping : System.Web.UI.Page
                 totalPrice += Convert.ToInt32(row["Price"]);
             }
 
-            using (cmd = new SqlCommand("INSERT INTO Orders(Order_ID, Items, Price, Quantity, Rest_ID) VALUES(@Order_id, @Item, @Price, @Quantity, @Rest_id)", conn))
+            using (cmd = new SqlCommand("INSERT INTO Orders(Order_ID, Items, Price, Quantity, Rest_ID, Tip) VALUES(@Order_id, @Item, @Price, @Quantity, @Rest_id, @Tip)", conn))
             {
                 cmd.Parameters.AddWithValue("@Order_id", System.DateTime.Now.ToString());
                 cmd.Parameters.AddWithValue("@Item", myItems.ToString());
                 cmd.Parameters.AddWithValue("@Price", totalPrice.ToString());
                 cmd.Parameters.AddWithValue("@Quantity", "");
                 cmd.Parameters.AddWithValue("@Rest_id", restaurantID);
+
+                if (tipText.Text == null)
+                {
+                    cmd.Parameters.AddWithValue("@Tip", Convert.ToInt32(tipText.Text));
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@Tip", 0);
+                }
+
 
                 SqlDataAdapter ada = new SqlDataAdapter(cmd);
                 conn.Open();

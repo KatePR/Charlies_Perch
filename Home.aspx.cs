@@ -13,6 +13,8 @@ public partial class Home : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        //The restaurantId is set in the database and upon selection of the restaurant name from the 
+        //dropdownlist, the value of that restaurant will be selected.
         restarauntId = Convert.ToInt32(DropDownList1.SelectedValue);
         string connString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
         SqlConnection conn = new SqlConnection(connString1);
