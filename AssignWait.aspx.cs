@@ -75,7 +75,7 @@ public partial class AssignWait : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         string connString1 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
-
+        string custId = "";
         using (SqlConnection conn = new SqlConnection(connString1))
         {
             using (cmd = new SqlCommand("SELECT * FROM Orders WHERE Order_ID = '" + OrdersDDL.SelectedValue.ToString().Trim() + "'", conn))
@@ -89,14 +89,16 @@ public partial class AssignWait : System.Web.UI.Page
             foreach (DataRow row in dt.Rows)
             {
                 items.Text = row["Items"].ToString().Trim();
+                custId = row["Cust_ID"].ToString().Trim();
             }
 
-            using (cmd = new SqlCommand("INSERT INTO Assigned(Id, Rest_ID, Name, Status) VALUES(@Id, @Rest_ID, @Name, @Status)", conn))
+            using (cmd = new SqlCommand("INSERT INTO Assigned(Id, Rest_ID, Name, Status, Cust_ID) VALUES(@Id, @Rest_ID, @Name, @Status, @Cust_id)", conn))
             {
                 cmd.Parameters.AddWithValue("@Id", OrdersDDL.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Rest_ID", locationDDL.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Name", WaiterWaitress.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Status", orderStatusDDL.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@Cust_id", custId);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -128,30 +130,13 @@ public partial class AssignWait : System.Web.UI.Page
         {
             orderStatusDDL.Items.Add(row["Status"].ToString().Trim());
         }
+
+
     }
 
     protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        /*
-        if (ListBox1.SelectedIndex != -1)
-        {
-
-            string connString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
-            SqlConnection conn2 = new SqlConnection(connString2);
-            SqlCommand cmd2 = new SqlCommand("UPDATE Orders SET Status = '" + orderStatusDDL.SelectedValue + "', Name = '" + WaiterWaitress.SelectedValue + "'    WHERE Order_ID = '" + OrdersDDL.SelectedValue + "'", conn2);
-            DataTable dt4 = new DataTable();
-            conn2.Open();
-            cmd2.ExecuteNonQuery();
-            conn2.Close();
-
-            foreach (DataRow row in dt4.Rows)
-            {
-                WaiterWaitress.Items.Add(row["Name"].ToString().Trim());
-                orderStatusDDL.Items.Add(row["Status"].ToString().Trim());
-            }
-            //update based on waiter and status button
-        }
-        */
+          
 
         SqlCommand cmd1 = new SqlCommand();
 
@@ -174,6 +159,27 @@ public partial class AssignWait : System.Web.UI.Page
                 WaiterWaitress.SelectedValue = row["Name"].ToString().Trim();
                 orderStatusDDL.SelectedValue = row["Status"].ToString().Trim();
             }
+        }
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (ListBox1.SelectedIndex != -1)
+        {
+
+            string connString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Rader\\Documents\\Visual Studio 2015\\WebSites\\Charlies_Perch\\App_Data\\LoginDatabase.mdf\";Integrated Security=True";
+            SqlConnection conn2 = new SqlConnection(connString2);
+            SqlCommand cmd2 = new SqlCommand("UPDATE Assigned SET Status = '" + orderStatusDDL.SelectedValue + "', Name = '" + WaiterWaitress.SelectedValue + "' WHERE Id = '" + ListBox1.SelectedValue + "'", conn2);
+            DataTable dt4 = new DataTable();
+            conn2.Open();
+            cmd2.ExecuteNonQuery();
+            conn2.Close();
+
+            SqlCommand cmd3 = new SqlCommand("UPDATE Orders SET Status = '" + orderStatusDDL.SelectedValue + "' WHERE Order_ID = '" + ListBox1.SelectedValue + "'", conn2);
+            conn2.Open();
+            cmd3.ExecuteNonQuery();
+            conn2.Close();
+
         }
     }
 }

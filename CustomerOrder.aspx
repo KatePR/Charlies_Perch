@@ -5,6 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Customer Order</title>
+    <style>
+        .hello
+        {
+            margin-left: 240px;
+            font-size: larger;
+        }
+        #orders {
+            margin-left: 240px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,7 +32,14 @@
         </asp:Panel>
         <br />
         <br />
-        <asp:Label ID="hello" runat="server" Font-Size="Larger" Text="Hello! Here is your order:"></asp:Label>
+        <div class ="hello">
+            <asp:Label ID="hello" runat="server" Font-Size="Larger" Text="Hello! Here is your order:"></asp:Label>
+        </div>
+        <div id="orders" runat="server">
+
+            <br />
+
+        </div>
         <br />
     </form>
 </body>

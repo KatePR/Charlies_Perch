@@ -13,9 +13,11 @@ public partial class Shopping : System.Web.UI.Page
     SqlCommand cmd = new SqlCommand();
     SqlCommand cmd1 = new SqlCommand();
     int restaurantID;
+    string Name;
     protected void Page_Load(object sender, EventArgs e)
     {
         restaurantID = Convert.ToInt32(DropDownList1.SelectedValue);
+        Name = Request.QueryString["Name"];
     }
 
     protected void homeButton_Click(object sender, EventArgs e)
@@ -55,15 +57,16 @@ public partial class Shopping : System.Web.UI.Page
                 totalPrice += Convert.ToInt32(row["Price"]);
             }
 
-            using (cmd = new SqlCommand("INSERT INTO Orders(Order_ID, Items, Price, Quantity, Rest_ID, Tip) VALUES(@Order_id, @Item, @Price, @Quantity, @Rest_id, @Tip)", conn))
+            using (cmd = new SqlCommand("INSERT INTO Orders(Order_ID, Items, Price, Quantity, Rest_ID, Tip, Cust_ID) VALUES(@Order_id, @Item, @Price, @Quantity, @Rest_id, @Tip, @Cust_id)", conn))
             {
                 cmd.Parameters.AddWithValue("@Order_id", System.DateTime.Now.ToString());
                 cmd.Parameters.AddWithValue("@Item", myItems.ToString());
                 cmd.Parameters.AddWithValue("@Price", totalPrice.ToString());
                 cmd.Parameters.AddWithValue("@Quantity", "");
                 cmd.Parameters.AddWithValue("@Rest_id", restaurantID);
+                cmd.Parameters.AddWithValue("@Cust_id", Name);
 
-                if (tipText.Text == null)
+                if (tipText.Text != null)
                 {
                     cmd.Parameters.AddWithValue("@Tip", Convert.ToInt32(tipText.Text));
                 }
@@ -72,12 +75,16 @@ public partial class Shopping : System.Web.UI.Page
                     cmd.Parameters.AddWithValue("@Tip", 0);
                 }
 
-
                 SqlDataAdapter ada = new SqlDataAdapter(cmd);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
         }
+    }
+
+    protected void view_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CustomerOrder.aspx?Name=" + Name);
     }
 }

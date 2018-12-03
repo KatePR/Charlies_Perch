@@ -107,6 +107,9 @@
             <br />
             <asp:Button ID="order" runat="server" Height="36px" OnClick="order_Click" style="margin-left: 0px" Text="Order" Width="100px" Font-Size="Medium" />
 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="view" runat="server" Height="35px" OnClick="view_Click" Text="View" Width="83px" />
+
         </center>
         
     </form>

@@ -76,6 +76,7 @@
         <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id" Height="127px" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Width="235px">
             <asp:ListItem></asp:ListItem>
         </asp:ListBox>
+        <asp:Button ID="updateAssigned" runat="server" OnClick="Button1_Click" Text="Update Assigned" />
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Assigned]"></asp:SqlDataSource>
         

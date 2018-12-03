@@ -61,7 +61,7 @@ public partial class Login : System.Web.UI.Page
                     Response.Redirect("StaffPage.aspx");
                 //if the username has the role of "Customer", the user will be redirected to the Home page.
                 else if (dt.Rows[i]["Role"].ToString() == "Customer")
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Shopping.aspx?Name=" + UsernameTextbox.Text);
             }
             else
             {
