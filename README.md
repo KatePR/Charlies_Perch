@@ -35,12 +35,33 @@ Prioritization Methods for Iteration 2:
   * Customers
   * Restaurant Director
     * Digital Interface
-    1. Pages will be uncluttered for easy of use.
+    1. Pages will be uncluttered for ease of use.
     2. Order page will allow customer to select quantity of an item.
     3. Customer order will be placed after the customer clicks the order button.
     4. The director will have the ability to view customer orders.
     5. The director will have the ability to assign a waiter/waitress to the order.
     6. The director will receive weekly reports of order information.
+    
+Third Iteration Requirements:
+* Each order will have a status; Received, In Preparation, Final Touches, On the Way.
+* The customer can view their order.
+* The customer can see the status of their order(Received, In Preparation, Final Touches, On the Way).
+* The director can change the status of the order(Received, In Preparation, Final Touches, On the Way).
+* Customers can tip their waiter/waitress with a specified dollar amount that they decide.
+
+Prioritization Methods for Iteration 3:
+* User Interface:
+  * Customers
+  * Restaurant Director
+    * Digital Interface
+    1. Pages will be uncluttered for ease of use.
+    2. There will be a list of order status types for the director to choose from.
+    3. The director will have the ability to select a status for the order.
+    4. The director will have the ability to update the status of the order with the click of a button.
+    5. The customer has the option of tipping their waiter/waitress.
+    6. Customer order and tip will be placed after the customer clicks the order button.
+    7. The customer will have the ability to view their order on the click of a button.
+    
 
 ## Built With
 
